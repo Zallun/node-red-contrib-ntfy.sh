@@ -1,0 +1,69 @@
+<script type="text/javascript">
+    RED.nodes.registerType('ntfy publish', { // Changed from 'ntfy' to 'ntfy publish'
+        category: 'function',
+        color: '#a6bbcf',
+        defaults: {
+            name: { value: "" },
+            topic: { value: "", required: true },
+            server: { value: "https://ntfy.sh", required: false },
+            title: { value: "", required: false },
+            tags: { value: "", required: false },
+            priority: { value: "", required: false }
+        },
+        inputs: 1,
+        outputs: 0,
+        icon: "font-awesome/fa-bell",
+        label: function () {
+            return this.name || "ntfy publish";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="ntfy publish">    <!-- Changed here -->
+       <div class="form-row">
+           <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+           <input type="text" id="node-input-name" placeholder="Name">
+       </div>
+       <div class="form-row">
+           <label for="node-input-topic"><i class="fa fa-hashtag"></i> Topic</label>
+           <input type="text" id="node-input-topic" placeholder="Topic">
+       </div>
+       <div class="form-row">
+           <label for="node-input-server"><i class="fa fa-server"></i> Server</label>
+           <input type="text" id="node-input-server" placeholder="https://ntfy.sh">
+       </div>
+       <div class="form-row">
+           <label for="node-input-title"><i class="fa fa-header"></i> Title</label>
+           <input type="text" id="node-input-title" placeholder="Optional title">
+       </div>
+       <div class="form-row">
+           <label for="node-input-tags"><i class="fa fa-tags"></i> Tags</label>
+           <input type="text" id="node-input-tags" placeholder="Optional, e.g. info,warning">
+       </div>
+       <div class="form-row">
+           <label for="node-input-priority"><i class="fa fa-exclamation"></i> Priority</label>
+           <select id="node-input-priority">
+               <option value="">Default</option>
+               <option value="1">Min</option>
+               <option value="2">Low</option>
+               <option value="3">Default</option>
+               <option value="4">High</option>
+               <option value="5">Max</option>
+           </select>
+       </div>
+</script>
+
+<script type="text/x-red" data-help-name="ntfy publish">    <!-- Changed here -->
+       <p>
+           Sends a notification via <a href="https://ntfy.sh" target="_blank">ntfy.sh</a>.
+       </p>
+       <p>
+           <b>Topic</b> is required. <br>
+           <b>Server</b>, <b>Title</b>, <b>Tags</b> and <b>Priority</b> are optional.
+       </p>
+       <p>
+           The actual message text is passed via <code>msg.payload</code>.<br>
+           The fields can also be set dynamically via the incoming message.<br>
+           <b>Priority</b> can be 1 (min), 2 (low), 3 (default), 4 (high), or 5 (max).
+       </p>
+</script>

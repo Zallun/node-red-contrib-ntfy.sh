@@ -1,0 +1,1 @@
+C:\Users\damas\source\repos\node-red-contrib-ntfy\obj\Debug\node-red-contrib-ntfy.esproj.CoreCompileInputs.cache

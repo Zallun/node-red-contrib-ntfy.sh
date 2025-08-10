@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <PropertyGroup>
+    <PackageJsonName Condition="$(PackageJsonName) == ''">@zallun/node-red-contrib-ntfy.sh</PackageJsonName>
+    <PackageJsonVersion Condition="$(PackageJsonVersion) == ''">0.1.0</PackageJsonVersion>
+    <PackageJsonDescription Condition="$(PackageJsonDescription) == ''">Simple node to send push notifications via ntfy.sh</PackageJsonDescription>
+    <PackageJsonDependenciesNodeFetch Condition="$(PackageJsonDependenciesNodeFetch) == ''">^2.7.0</PackageJsonDependenciesNodeFetch>
+    <PackageJsonKeywords Condition="$(PackageJsonKeywords) == ''">[
+  "ntfy.sh",
+  "notification"
+]</PackageJsonKeywords>
+    <PackageJsonLicense Condition="$(PackageJsonLicense) == ''">ISC</PackageJsonLicense>
+    <PackageJsonAuthor Condition="$(PackageJsonAuthor) == ''">Zallun</PackageJsonAuthor>
+    <PackageJsonType Condition="$(PackageJsonType) == ''">commonjs</PackageJsonType>
+    <PackageJsonScriptsTest Condition="$(PackageJsonScriptsTest) == ''">echo "Error: no test specified" &amp;&amp; exit 1</PackageJsonScriptsTest>
+    <PackageJsonNodeRedVersion Condition="$(PackageJsonNodeRedVersion) == ''">&gt;=3</PackageJsonNodeRedVersion>
+    <PackageJsonNodeRedNodesNtfy Condition="$(PackageJsonNodeRedNodesNtfy) == ''">nodes/ntfy.js</PackageJsonNodeRedNodesNtfy>
+    <PackageJsonEnginesNode Condition="$(PackageJsonEnginesNode) == ''">&gt;=18.5</PackageJsonEnginesNode>
+  </PropertyGroup>
+</Project>

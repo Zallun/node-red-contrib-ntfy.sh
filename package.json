@@ -1,0 +1,27 @@
+{
+  "name": "@zallun/node-red-contrib-ntfy.sh",
+  "version": "0.1.0",
+  "description": "Simple node to send push notifications via ntfy.sh",
+  "dependencies": {
+    "node-fetch": "^2.7.0"
+  },
+  "keywords": [
+    "ntfy.sh",
+    "notification"
+  ],
+  "license": "ISC",
+  "author": "Zallun",
+  "type": "commonjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "node-red": {
+    "version": ">=3",
+    "nodes": {
+      "ntfy": "nodes/ntfy.js"
+    }
+  },
+  "engines": {
+    "node": ">=18.5"
+  }
+}
